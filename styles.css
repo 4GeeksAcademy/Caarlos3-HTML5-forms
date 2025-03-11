@@ -1,0 +1,10 @@
+*{
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+h3{
+    border: none;
+}
+.principal *{
+    border: none;
+}
