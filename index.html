@@ -9,91 +9,106 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-      <div class="principal col-12 border rounded-2">
-         <h3 class="p-3 bg-secondary bg-opacity-10 border-bottom">Payment form example</h3>
-         <div class="alert alert-danger mx-2 my-5" role="alert">Some fields are missing</div>
-         <div id="cuerpo" class="border-end border-start">
-          <div class=" d-flex">
-            <div class=" row col-6">
-                <label class="fs-5 fw-normal ms-3 mb-2" for="creditcard">Card #</label>
-                <input class="border border-secondary rounded-2 col-10 ms-4" type="text" id="creditcard" maxlength="16" placeholder="xxxxxxxxxxxxxxxx">
-            </div>
-            <div class="row col-3">
-                <label class="fs-5 fw-normal mb-2" for="cvc">CVC #</label>
-                <input class="border border-secondary rounded-2 col-8 ms-2" type="text" id="cvc" maxlength="4" placeholder="0000">
-            </div>
-            <div class="row col-3">
-                <label for="amount" class="fs-5 fw-normal mb-2">Amount</label>
-                <input class="border border-secondary rounded-2 col-12 ms-2" type="text" id="amount" placeholder="Amount">
-            </div>
-          </div>
-
-          <div class=" d-flex col-12 mt-4">
-            <div class="row col-6">
-             <label  class="fs-5 ms-3 mb-2"for="name">First Name</label>
-             <input class="border border-secondary rounded-2 col-11 ms-4" type="text" id="name">
-            </div>
-
-            <div class="row col-6">
-              <label class="fs-5 ms-3 mb-2" for="apellido">Last Name</label>
-              <input class="border border-secondary rounded-2 col-12 ms-4 type="text" id="apellido">
-            </div>
-          </div>
-          <div class=" d-flex mt-4 ">
-            <div class=" row col-6">
-                <label class="fs-5 fw-normal ms-3" for="city">City</label>
-                <input class="border border-secondary rounded-2 col-10 mt-2 ms-4" type="text" id="city">
-            </div>
-            <div class="row col-3">
-                <label class="fs-5 fw-normal" for="state">State</label>
-                <select class="border border-secondary rounded-2 col-8 mt-2 ms-2" type="radio" id="state" placeholder="Pick state">
-                  <option value="none">Pick state</option>
-                  <option value="Madrid">Madrid</option>
-                  <option value="Granada">Granada</option>
-                  <option value="Mallorca">Mallorca</option>
-                </select>
-            </div>
-            <div class="row col-3">
-                <label for="code" class="fs-5 fw-normal">Postal code</label>
-                <input class="border border-secondary rounded-2 col-12 mt-2 ms-2" type="text" id="code">
-            </div>
-          </div>  
-
-          <div class="d-flex col-12">
-            <div class="col-6 mt-4">
-              <p class="fs-5 fw-normal ms-3">We accept:</p>
-              <form class=" d-flex justify-content-between bg-secondary col-4 rounded-2 ms-3 p-2"> 
-                <label>
-                    <input type="radio" name="mastercard" value="opcion1"> <i class="fa-brands fa-cc-mastercard" style="color: #ffffff;"></i>
-                </label>
-            
-                <label>
-                    <input type="radio" name="Visa" value="opcion2"> <i class="fa-brands fa-cc-visa" style="color: #ffffff;"></i>
-                </label>
-            
-                <label>
-                    <input type="radio" name="apple" value="opcion3"> <i class="fa-brands fa-cc-apple-pay" style="color: #ffffff;"></i>
-                </label>
-            
-                <label>
-                    <input type="radio" name="american express" value="opcion4"> <i class="fa-brands fa-cc-amex" style="color: #ffffff;"></i>
-                </label>
-              </form>
-            </div>
-            <div class="row col-6 mt-4 fs-5">
-              <label class="mb-2 for="texto">Message</label>
-              <textarea class="border border-secondary rounded-2 p-3" name="message" id="texto"></textarea>
-              <p class="fw-lighter fs-6 mt-2">Add any notes here.</p>
-            </div>
-          </div>
+    <div class="row justify-content-center mt-5">
+      <div class="card col-12 col-md-10 col-lg-8 p-0">
+        <div class="card-header">
+           <h3>Payment form Example</h3> 
         </div>
-
-          <div class=" d-flex col-12 bg-secondary bg-opacity-10 justify-content-end border p-3 rounded-2">
+        <div class="card-body">
+          <div class="alert alert-danger" role="alert">
+            Some fields are missing
+          </div>
+          <form action="#">
+            <div class=" row mt-4">
+              <div class="col-12 col-md-6 col-lg-5 pb- pb-3">
+                <label for="card" class="pb-2 fs-5 fw-semibold">Card #</label>
+                <input class="form-control" type="text" name="numberCard" id="card" placeholder="XXXXXXXXXXXXXXX" maxlength="16">
+              </div>
+              <div class="col-6 col-md-3 pb-3">
+                <label class="pb-2 fs-5 fw-semibold" for="cvc">CVC #</label>
+                <input class="form-control" type="text" name="cvcCard" id="cvc" placeholder="0000" maxlength="4">
+              </div>
+              <div class="col-6 col-md-3 pb-3">
+                <label class="pb-2 fs-5 fw-semibold" for="amount">Amount</label>
+                <div class="input-group">
+                  <div class="input-group-addon">
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <input class="form-control" id="amount" placeholder="Amount" type="number">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12 col-sm-6 pb-3">
+                <label class="pb-2 fs-5 fw-semibold" for="firstName">First name </label>
+                <input class="form-control" type="text" id="firstName">
+              </div>
+              <div class="col-12 col-sm-6 pb-3">
+                <label class="pb-2 fs-5 fw-semibold" for="lastName">Last name </label>
+                <input class="form-control" type="text" id="lastName">
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12 col-sm-6 pb-3">
+                <label class="pb-2 fs-5 fw-semibold" for="city">City</label>
+                <input class="form-control" type="text" id="city">
+              </div>
+              <div class=" pb-3 col-6 col-sm-3">
+                <label class="pb-2 fs-5 fw-semibold" for="state">State</label>
+                <select class="form-select" name="eleccion" id="state">
+                  <option value="pick">Pick a state</option>
+                  <option value="Mallorca">Mallorca</option>
+                  <option value="Granada">Granada</option>
+                  <option value="Caceres">Cáceres</option>
+                  <option value="Madrid">Madrid</option>
+                </select>               
+              </div>
+              <div class="col-6 col-sm-3 pb-3">
+                <label class="pb-2 fs-5 fw-semibold" for="postalCode">Postal code</label>
+                <input class="form-control" type="text" id="postalCode" maxlength="5">
+              </div>
+            </div>
+            <div class="row mt-4">
+            <div class="col-12 col-md-6 pb-3">
+            <p class="fs-5 fw-semibold" for="creditCards">We accept:</p>
+						 <div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-secondary">
+								<input autocomplete="off" checked id="blue" name="options" type="radio">
+								<i class="fab fa-cc-mastercard"></i>
+							</label> 
+							<label class="btn btn-secondary">
+								<input autocomplete="off" id="red" name="options" type="radio">
+								<i class="fab fa-cc-visa"></i>
+							</label> 
+							<label class="btn btn-secondary">
+								<input autocomplete="off" id="green" name="options" type="radio">
+								<i class="fab fa-cc-diners-club"></i>
+							</label> 
+							<label class="btn btn-secondary">
+								<input autocomplete="off" id="yellow" name="options" type="radio">
+								<i class="fab fa-cc-amex"></i>
+							</label> 
+              </div>
+						</div>
+            <div class="col-12 col-md-6 pb-3">
+              <label for="exampleMessage">Message</label> 
+              <textarea class="form-control" id="exampleMessage" rows="3"></textarea> 
+              <small class="text-muted">Add any notes here.</small>
+            </div>
+          </div>         
+				 </div>
+          </form>
+          <div class=" card-footer text-body-secondary d-flex col-12 bg-secondary bg-opacity-10 justify-content-end border p-3 rounded-2">
             <button type="button" class="btn btn-secondary">Cancel</button>
             <button type="button" class="btn btn-primary">Send</button>
-
-          </div>
+        </div>
+        </div>
+       
+        </div>
       </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
